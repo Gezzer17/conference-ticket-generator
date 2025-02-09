@@ -9,12 +9,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Inconsolata;
+    color: white;
 }
 
 body
 {
     background-image: url(/assets/images/background-desktop.png);
     background-size: cover;
-    background-repeat: no-repeat;
+    background-attachment: fixed;
     
 }
