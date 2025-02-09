@@ -12,10 +12,3 @@
     color: white;
 }
 
-body
-{
-    background-image: url(/assets/images/background-desktop.png);
-    background-size: cover;
-    background-attachment: fixed;
-    
-}
