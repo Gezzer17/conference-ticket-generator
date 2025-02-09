@@ -1,0 +1,27 @@
+/*Glavni div gdje forma*/
+.glavni-div
+{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*GornjiNaslovSaLogom */
+
+.gornji-naslov
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 2rem;
+    font-weight: 800;
+    font-size: 1.6rem;
+}
+
+.logo-mark
+{
+    width: 1.6rem;
+    height: 1.6rem;
+}
