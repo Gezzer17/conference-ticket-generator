@@ -4,7 +4,7 @@
     width: 70%;
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid white;
+    
 }
 
 body
@@ -38,8 +38,8 @@ body
 .veliki-naslov
 {
     text-align: center;
-    margin-top: 4rem;
-    font-size: 4rem;
+    margin-top: 2.2rem;
+    font-size: 3.6rem;
     margin-bottom: 1.4rem;
 }
 
@@ -48,7 +48,7 @@ body
 .tekst-ispod-naslova
 {
     text-align: center;
-    opacity: 0.8;
+    color: hsl(252, 6%, 83%);
     font-size: 1.5rem;
     margin-bottom: 2rem;
 }
@@ -60,9 +60,103 @@ body
     width: 40%;
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid white;
-    height: 500px;
+    display: flex;
+    flex-direction: column;
+    
 }
 
 
 /*Stimanje diva gdje input upload*/
+
+
+.upload-div
+{
+    border: 3px dashed hsl(245, 15%, 58%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: hsla(245, 15%, 58%,0.15);
+}
+
+/*Stimanje input uploda , pravljenje custom ikone*/
+
+#dugmeZaUpload
+{
+    display: none;
+}
+.dugme-Custom
+{
+    
+    padding: 6px;
+    background-color: hsl(245, 19%, 35%);
+    border-radius: 10px;
+    outline: 1px solid hsl(245, 15%, 58%);
+}
+.dugme-Custom:hover
+{
+    cursor: pointer;
+}
+
+.tekst-ispod-upload-dugmeta
+{
+    color: hsl(252, 6%, 83%);
+    font-size: 1.4rem;
+}
+
+/*Stimanje labela, i njegovih velicina*/
+.imena-za-inpute
+{
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+    margin-top: 1.2rem;
+    font-weight: bold;
+}
+
+
+/*Stimanje labela ispod upload diva*/
+
+.ispod-info-label
+{
+    display: flex;
+    gap: 10px;
+    margin-top: 1.2rem;
+    font-size: 0.7rem;
+    
+}
+.ispod-info-label *
+{
+    color: hsl(252, 6%, 83%);
+}
+
+/*Stimanje inputa ispod diva, */
+
+.inputi-ispod
+{
+    padding: 20px 10px;
+    border-radius: 10px;
+    background-color: hsla(245, 15%, 58%,0.15);
+    font-size: 1.3rem;
+    outline: none;
+    color: hsl(252, 6%, 83%);
+}
+
+
+/*Submit button*/
+
+#crveniInput
+{
+    margin-top: 1.4rem;
+    color: hsl(248, 70%, 10%);
+    background-color: hsl(7, 71%, 60%);
+    outline: none;
+    font-weight: bold;
+    border: none;
+}
+#crveniInput:hover
+{
+    cursor: pointer;
+}
+

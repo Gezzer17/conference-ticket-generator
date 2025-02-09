@@ -16,7 +16,6 @@ The designs were created to the following widths:
 - Neutral 500: hsl(245, 15%, 58%)
 - Neutral 700: hsl(245, 19%, 35%)
 - Neutral 900: hsl(248, 70%, 10%)
-
 - Orange 500: hsl(7, 88%, 67%)
 - Orange 700: hsl(7, 71%, 60%)
 

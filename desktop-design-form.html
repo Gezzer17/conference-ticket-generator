@@ -23,10 +23,19 @@
     <form action="" class="formaDesktop">
       <label for="uploadDiv" class="imena-za-inpute">Upload Avatar</label>
       <div class="upload-div" id="uploadDiv">
-        <label for="dugmeZaUpload">Drag and drop or click to upload</label>
         <input  type="file" name="fileUpload" id="dugmeZaUpload">
+        <label for="dugmeZaUpload" class="dugme-Custom"><img src="/assets/images/icon-upload.svg" alt=""></label>
+        <p class="tekst-ispod-upload-dugmeta">Drag and drop or click to upload</p>
       </div>
       <label for="uploadDiv" class="ispod-info-label"><img src="/assets/images/icon-info.svg" alt=""><p>Upload your photo (JPG or PNG, max size: 500KB).</p></label>
+
+      <label for="" class="imena-za-inpute">Full Name</label>
+      <input type="text" id="imeVal" class="inputi-ispod">
+      <label for="" class="imena-za-inpute" >Email Address</label>
+      <input type="email" class="inputi-ispod" placeholder="example@email.com">
+      <label for="" class="imena-za-inpute">GitHub Username</label>
+      <input type="text" class="inputi-ispod" placeholder="@username">
+      <button class="inputi-ispod" id="crveniInput" >Generate My Ticket</button>
     </form>
   </div>
 
