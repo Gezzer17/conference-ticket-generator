@@ -1,19 +1,31 @@
 /*Glavni div gdje forma*/
 .glavni-div
 {
+    position: absolute;
     width: 70%;
     margin-left: auto;
     margin-right: auto;
+    z-index: 999;
+    min-width: 800px;
     
+    
+}
+
+/*ContainerDiv*/
+
+.container
+{
+    width: 100vw;
+    height: 100vh;
+    background: url(/assets/images/background-desktop.png);
+    background-size: cover;
 }
 
 body
 {
-    background-image: url(/assets/images/background-desktop.png);
-    background-size: cover;
-    background-attachment: fixed;
-    
+    overflow: hidden;
 }
+
 /*GornjiNaslovSaLogom */
 
 .gornji-naslov
@@ -22,7 +34,7 @@ body
     justify-content: center;
     align-items: center;
     gap: 12px;
-    margin-top: 2rem;
+    padding-top: 2rem;
     font-weight: 800;
     font-size: 1.6rem;
 }
@@ -223,4 +235,63 @@ body
     cursor: pointer;
     
 }
+
+
+.glavni-div
+{
+    position: relative;
+    z-index: 99;
+}
+
+
+.linije
+{
+    
+    width: 100%;
+}
+.svgElementi
+{
+    position: absolute;
+}
+.krug
+{
+    position: absolute;
+    left: 12%;
+    top: -10%;
+}
+
+.krivudavaLinijaTopDesno
+{
+    right: 5%;
+    top: 6%;
+}
+
+.krug2
+{
+    top:60%;
+    left: 60%;
+}
+.donjaKrivudavaLinija
+{
+    top: 65%;
+    left: 10%;
+}
+
+
+
+/*Animacija boja*/
+@keyframes gradientAnimation {
+    0% { stop-color: #fff; }
+    50% { stop-color: #F37362; }
+    100% { stop-color: #62F3D6; }
+  }
+
+  .stop1, .stop3 {
+    animation: gradientAnimation 5s infinite alternate;
+  }
+
+  .stop2 {
+    animation: gradientAnimation 5s infinite alternate-reverse;
+  }
+
 

@@ -195,7 +195,7 @@ let dodavanjeLabela = (imeParentDiva,tekst) =>
         pMali.classList.toggle('state-error');
         svgIspod.classList.toggle('error-svg');
 
-    }, 5000);
+    }, 3000);
     
 }
 //Stimanje validacija nakon klika button
@@ -206,7 +206,7 @@ let ValidirajEmail = (email) =>
 
     if(regex.test(email))
     {
-        console.log("Dobar email " + email);
+        
         return true;
     }
     else
@@ -229,10 +229,10 @@ let ValidirajUserName = (username) =>
 }
 
 
-//
+// Validacija radi, ne znam , al radi 
 let ValidacijaInputa = ()=>
 {
-    console.log("Tu smo")
+    let istina = true;
     const ime = document.getElementById('imeVal');
     const email = document.getElementById('email');
     const userName = document.getElementById('username');
@@ -241,9 +241,14 @@ let ValidacijaInputa = ()=>
     
     if(slika)
     {
+        
         const pLabelaIspod = document.querySelector('.ispod-info-label p');
         const svgLabelaIspod = document.querySelector('.ispod-info-label svg');
         let stalniTekst = pLabelaIspod.innerHTML;
+        if(pLabelaIspod.classList.contains('state-error'))
+        {
+            return;
+        }
         pLabelaIspod.innerHTML = "Please select the picture!";
         pLabelaIspod.classList.toggle('state-error');
         svgLabelaIspod.classList.toggle('error-svg');
@@ -254,24 +259,25 @@ let ValidacijaInputa = ()=>
             svgLabelaIspod.classList.toggle('error-svg');
             
         }, 3000);
-            
+        istina = false;
+        
     }
     if(!ime.value.trim())
     {
     
-        dodavanjeLabela('valIme');
+        istina = dodavanjeLabela('valIme');
     }
     if(!email.value.trim()  || !ValidirajEmail(email.value))
     {
-        dodavanjeLabela('valEmail');
+        istina = dodavanjeLabela('valEmail');
     }
     if(!userName.value.trim() || !ValidirajUserName(userName.value))
     {
-        dodavanjeLabela('valUsername');
+        istina = dodavanjeLabela('valUsername');
     }
 
 
-
+    return istina;
 }
 
 
@@ -280,7 +286,7 @@ let provjeraISubmitanje = (e)=>
     e.preventDefault();
     if(ValidacijaInputa())
     {
-        alert("Uspjesno validirano sve")
+        console.log("Nastavit ce se");
     }
 
 }
