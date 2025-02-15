@@ -2,6 +2,7 @@ const divUpload = document.querySelector('.upload-div');
 const inputUpload = document.querySelector('[name=fileUpload]')
 const sviElementiUUploadDivu = divUpload.querySelectorAll('*');
 const defaultniIzgleddivUploada = divUpload.innerHTML;
+const glavniContainer = document.querySelector('.glavni-div');
 
 
 let otvoriFileBrowser = ()=>
@@ -286,7 +287,8 @@ let provjeraISubmitanje = (e)=>
     e.preventDefault();
     if(ValidacijaInputa())
     {
-        console.log("Nastavit ce se");
+
+        glavniContainer.innerHTML = "";
     }
 
 }
@@ -300,3 +302,43 @@ submitDugme.addEventListener('click',provjeraISubmitanje)
 
 
 
+
+
+/*Stimanje tabiranja*/
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Tab') {
+       
+       
+        const inputi = Array.from(document.querySelectorAll('[tabindex]'));
+        console.log(inputi);
+        const fokusiraniIndex = inputi.findIndex(input=> input === document.activeElement);
+        
+        if(fokusiraniIndex === inputi.length - 1)
+        {
+            e.preventDefault();
+            inputi[0].focus();
+        }
+
+
+    }
+});
+
+
+/*Event listner za upload div*/
+
+
+divUpload.addEventListener('focus',(e)=>
+{
+    divUpload.addEventListener('keydown',(e)=>
+    {
+
+        if(e.key === "Enter")
+        {
+            otvoriFileBrowser();
+        }
+
+    })
+
+
+})

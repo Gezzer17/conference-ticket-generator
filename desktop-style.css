@@ -174,11 +174,16 @@ body
     cursor: pointer;
     outline: 2px solid white;
 }
+#crveniInput:focus
+{
+    border: 4px solid black;
+    outline: 3px solid  hsl(0, 0%, 100%);
+}
 
 
 .upload-div:hover
 {
-    outline: 3px solid hsl(245, 15%, 58%);
+    background-color: hsl(245, 15%, 58%);
     cursor: pointer;
 }
 .inputi-ispod:focus
@@ -186,6 +191,11 @@ body
     outline: 3px solid hsl(245, 19%, 35%);
     border-color: hsl(248, 70%, 10%);
     border-width: 5px;
+}
+.inputi-ispod:hover
+{
+    background-color: hsl(245, 15%, 58%);
+    cursor: pointer;
 }
 
 
@@ -252,6 +262,7 @@ body
 .svgElementi
 {
     position: absolute;
+    
 }
 .krug
 {
@@ -293,5 +304,90 @@ body
   .stop2 {
     animation: gradientAnimation 5s infinite alternate-reverse;
   }
+
+
+
+  /*uploadDiv focus*/
+  .upload-div:focus
+  {
+    outline: 3px solid hsl(245, 19%, 35%);
+    
+  }
+  
+  @media screen and (max-width:428px) {
+    
+    .glavni-div
+    {
+        min-width: initial;
+        width: 90%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .veliki-naslov
+    {
+        
+        font-size: 1.5rem;
+        margin-bottom: 0.4rem;
+        margin-top: 1rem;
+    }
+    .tekst-ispod-naslova
+    {
+        font-size: 1rem;
+    }
+    .formaDesktop
+    {
+        width: 100%;
+        height: auto;
+    }
+    .imena-za-inpute
+    {
+        font-size: 1.2rem;
+    }
+    .tekst-ispod-upload-dugmeta
+    {
+        font-size: 1.2rem;
+    }
+    .inputi-ispod
+    {
+        font-size: 1.1rem;
+        padding: 15px 10px;
+    }
+   
+    .container
+    {
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        
+    }
+    .krug2
+    {
+        display: none;
+    }
+    .donjaKrivudavaLinija
+    {
+        width: 400px;
+        left: -32%;
+        top: 70%;
+    }
+    .linije 
+    {
+        width: 100%;
+        height: 100px;
+        
+    }
+    
+    
+
+
+    
+  }
+
+  
+
+
 
 
