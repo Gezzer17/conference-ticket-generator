@@ -3,6 +3,13 @@ const inputUpload = document.querySelector('[name=fileUpload]')
 const sviElementiUUploadDivu = divUpload.querySelectorAll('*');
 const defaultniIzgleddivUploada = divUpload.innerHTML;
 const glavniContainer = document.querySelector('.glavni-div');
+let obj = 
+{
+    slika:"",
+    ime:"",
+    email:"",
+    username:"" 
+};
 
 
 let otvoriFileBrowser = ()=>
@@ -281,6 +288,39 @@ let ValidacijaInputa = ()=>
     return istina;
 }
 
+let NastimajSve = () =>
+{
+    let gornjiDio = `<h4 class="gornji-naslov"><img src="/assets/images/logo-mark.svg" alt="" class="logo-mark">Coding Conf</h4>`;
+    let gornjiNaslov = `<h1 class="veliki-naslov">Congrats, <span class="imePrezime">${obj.ime}</span>!<br>Your ticket is ready</h1>`;
+    let opis = `<p class="tekst-ispod-naslova">We've eamiled your ticket to <br><span class="email">${obj.email}</span> and will send updates in <br> the run to event</p>`
+    let ticket = `<div class="Ticket">
+    <div class="lijevaStranaTicket">
+        <div class="logoNaziv">
+            <img src="/assets/images/logo-mark.svg" alt="" class="logo-mark" >
+            <h3>Coding Conf</h3>
+        </div>
+        <p>Jan 31, 2025 / Austin, TX</p>
+        <div class="Donja Strana">
+            <img>Slika
+            <div class="imeUsername">
+                <h4>Ime</h4>
+                <div class="username">
+                    <svg width="50"></svg>
+                    <p>username</p>
+                </div>
+            </div>
+        </div>
+        <div class="desnaStrana">
+            <h3 class="idTicketa"></h3>
+        </div>
+    </div>
+</div>`
+    glavniContainer.innerHTML+=gornjiDio;
+    glavniContainer.innerHTML+=gornjiNaslov;
+    glavniContainer.innerHTML+=opis;
+    glavniContainer.innerHTML+=ticket;
+
+}
 
 let provjeraISubmitanje = (e)=>
 {
@@ -288,7 +328,14 @@ let provjeraISubmitanje = (e)=>
     if(ValidacijaInputa())
     {
 
-        glavniContainer.innerHTML = "";
+        obj.ime = document.getElementById("imeVal").value;
+        obj.email = document.getElementById("email").value;
+        obj.username = document.getElementById("username").value;
+        obj.slika = document.querySelector('.slika-upload').src;
+        glavniContainer.innerHTML ="";
+        console.log(obj);
+        NastimajSve();
+
     }
 
 }

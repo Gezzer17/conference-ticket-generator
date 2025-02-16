@@ -313,6 +313,38 @@ body
     outline: 3px solid hsl(245, 19%, 35%);
     
   }
+
+
+  .imePrezime
+  {
+    background-image: linear-gradient(to right, hsl(7, 71%, 60%), white);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* Make the text color transparent to show the gradient */
+
+  }
+  .email
+  {
+    color: hsl(7, 71%, 60%);
+  }
+
+
+  /*Ticket*/
+
+  .Ticket
+  {
+    background-color: lightgreen;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    height: auto;
+    clip-path: polygon(
+        0% 0%, 83% 0%, 83% 5%, 84% 10%, 85% 15%, 86% 10%, 87% 5%, 87% 0%, 100% 0%, 
+        100% 100%, 87% 100%, 87% 95%, 86% 90%, 85% 85%, 84% 90%, 83% 95%, 83% 100%, 0% 100%
+      );
+
+  }
   
   @media screen and (max-width:428px) {
     
