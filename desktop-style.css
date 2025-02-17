@@ -9,6 +9,7 @@
     min-width: 800px;
     
     
+    
 }
 
 /*ContainerDiv*/
@@ -34,7 +35,7 @@ body
     justify-content: center;
     align-items: center;
     gap: 12px;
-    padding-top: 2rem;
+    padding-top: 1.4rem;
     font-weight: 800;
     font-size: 1.6rem;
 }
@@ -50,9 +51,9 @@ body
 .veliki-naslov
 {
     text-align: center;
-    margin-top: 2.2rem;
-    font-size: 3.6rem;
-    margin-bottom: 1.2rem;
+    margin-top: 0.6rem;
+    font-size: 2.4rem;
+    margin-bottom: 0.5rem;
 }
 
 /*paragraf ispod velikog naslova*/
@@ -61,7 +62,7 @@ body
 {
     text-align: center;
     color: hsl(252, 6%, 83%);
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     margin-bottom: 0.5rem;
 }
 
@@ -87,7 +88,7 @@ body
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 25px;
+    gap: 10px;
     padding: 20px;
     border-radius: 15px;
     background-color: hsla(245, 15%, 58%,0.15);
@@ -121,9 +122,9 @@ body
 /*Stimanje labela, i njegovih velicina*/
 .imena-za-inpute
 {
-    font-size: 1.4rem;
-    margin-bottom: 1.2rem;
-    margin-top: 1.2rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
     font-weight: bold;
 }
 
@@ -149,10 +150,10 @@ body
 
 .inputi-ispod
 {
-    padding: 20px 10px;
+    padding: 15px 5px;
     border-radius: 10px;
     background-color: hsla(245, 15%, 58%,0.15);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     outline: none;
     color: hsl(252, 6%, 83%);
 }
@@ -162,7 +163,7 @@ body
 
 #crveniInput
 {
-    margin-top: 1.4rem;
+    margin-top: 2rem;
     color: hsl(248, 70%, 10%);
     background-color: hsl(7, 71%, 60%);
     outline: none;
@@ -333,36 +334,126 @@ body
 
   .Ticket
   {
-    background-color: lightgreen;
+    position: relative;
+    background: linear-gradient(to right,hsl(245, 19%, 35%) 5%,hsl(245,15%,58%) 100%);
     width: 50%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10%;
+    margin-top: 7%;
     height: auto;
-    clip-path: polygon(
-        0% 0%, 83% 0%, 83% 5%, 84% 10%, 85% 15%, 86% 10%, 87% 5%, 87% 0%, 100% 0%, 
-        100% 100%, 87% 100%, 87% 95%, 86% 90%, 85% 85%, 84% 90%, 83% 95%, 83% 100%, 0% 100%
-      );
-
+    display: flex;
+    justify-content: space-between;
+    border-radius: 15px;
+      
+    border: 1px solid linear-gradient(hsl(0, 0%, 100%),hsl(7, 88%, 67%));
+      
   }
+  .Ticket::before {
+    content: '';
+    position: absolute;
+    top: -2px; /* Adjust for border width */
+    left: -2px; /* Adjust for border width */
+    right: -2px; /* Adjust for border width */
+    bottom: -2px; /* Adjust for border width */
+    background: linear-gradient(hsl(0, 0%, 100%) 0%,hsl(0, 0%, 100%) 75%, hsl(7, 71%, 60%) 75%,  hsl(7, 71%, 60%) 100%);
+    border-radius: 15px; /* Match the parent's border radius */
+    z-index: -1;
+  }
+  .brojka
+  {
+    display: flex;
+    transform: rotate(90deg);
+    font-size: 2.4rem;
+    text-align: right;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.7);
+  }
+ 
+
+  .lijevaStranaTicket
+  {
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+    gap: 3.4rem;
+    width: 80%;
+    border-right: 5px dashed rgba(0, 0, 0, 0.7);
+    
+  }
+  .gornja-desna-strana-ticket
+  {
+    display: flex;
+    flex-direction: column;
+  }
+  .logoNaziv
+  {
+    display: flex;
+    align-items: center;
+    font-size: 2.5rem;
+    gap: 15px;
+  }
+  .gornja-desna-strana-ticket p
+  {
+    margin-left: 9%;
+    font-size: 1.5rem;
+    opacity: 70%;
+    margin-top: 3%;
+  }
+  .Donja-Strana
+  {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+
+  /*Slika donja strana*/
+  .slika
+  {
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+    object-fit: cover;
+  }
+  .desno-tekst-o
+  {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 2rem;
+    
+  }
+  .logo-username
+  {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    gap: 7px;
+    opacity: 70%;
+  }
+
+
   
   @media screen and (max-width:428px) {
     
     .glavni-div
     {
         min-width: initial;
-        width: 90%;
+        width: 95%;
         height: 100%;
         display: flex;
         flex-direction: column;
         gap: 10px;
+        overflow: hidden;
     }
     .veliki-naslov
     {
         
         font-size: 1.5rem;
         margin-bottom: 0.4rem;
-        margin-top: 1rem;
+        
     }
     .tekst-ispod-naslova
     {
@@ -371,11 +462,17 @@ body
     .formaDesktop
     {
         width: 100%;
-        height: auto;
+        height: 100%;
     }
+
     .imena-za-inpute
     {
         font-size: 1.2rem;
+    }
+    .inputi-ispod:focus {
+        outline: 1px solid hsl(245, 19%, 35%);
+        border-color: hsl(248, 70%, 10%);
+        border-width: 5px;
     }
     .tekst-ispod-upload-dugmeta
     {
@@ -412,9 +509,26 @@ body
         
     }
     
-    
+    .Ticket
+    {
+        width: 95%;
+        margin-top: 15%;
 
-
+    }
+    .Ticket *
+    {
+        font-size: 1.4rem;
+    }
+    .gornja-desna-strana-ticket p
+    {
+        font-size: 1rem;
+    }
+    #crveniInput:focus
+        {
+            border: 2px solid black;
+            outline: none;
+        }
+        
     
   }
 
